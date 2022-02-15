@@ -15,7 +15,7 @@ public class OriginalScore implements GameScore{
         //initial score
         int score = 100;
         //penalizes with 10 points per incorrect letters
-        score =- incorrectCount * 10;
+        score -= incorrectCount * 10;
         //min score is 0
         if (score < 0){
             throw new RuntimeException("min score allowed is 0");

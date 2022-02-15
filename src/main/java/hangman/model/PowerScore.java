@@ -16,7 +16,7 @@ public class PowerScore implements  GameScore {
         //initial score
         int score = 0;
         //bonification with 5^i i is the number of the letter
-        for(int i = 0; i < correctCount; i++){
+        for(int i = 1; i <= correctCount; i++){
             score += Math.pow(5, i);
         }
         //penalizes with 10 points per incorrect letters
