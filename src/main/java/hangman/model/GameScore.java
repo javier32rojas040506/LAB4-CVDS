@@ -4,8 +4,8 @@ public interface GameScore{
     /**
      * @param correctCount
      * @param incorrectCount
-     * @throws
-     * @return
+     * @throws RuntimeException when the score is negative
+     * @return int that means the final score
      */
     public int calculateScore(int correctCount, int incorrectCount);
 }
