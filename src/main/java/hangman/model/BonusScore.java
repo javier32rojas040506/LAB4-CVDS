@@ -20,7 +20,7 @@ public class BonusScore implements GameScore {
         score -= incorrectCount * 5;
         //min score is 0
         if (score < 0){
-            throw new RuntimeException("min score allowed is 0");
+            score = 0;
         }
         return score;
     }

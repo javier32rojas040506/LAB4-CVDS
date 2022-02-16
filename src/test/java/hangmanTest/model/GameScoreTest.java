@@ -94,12 +94,12 @@ public class GameScoreTest {
 
 // Power Bonus Score
 /* start score is 0 */
-//CorrectCount = 0 incorrectCount = 0, x = 0
-@Test
-public void PowerScoreStartScore() {
-    int score = powerScore.calculateScore(0, 0);
-    Assert.assertEquals(0, score);
-}
+   //CorrectCount = 0 incorrectCount = 0, x = 0
+    @Test
+    public void PowerScoreStartScore() {
+        int score = powerScore.calculateScore(0, 0);
+        Assert.assertEquals(0, score);
+    }
     /* 5^i points bonus per correct letters */
     //CorrectCount = 3 incorrectCount = 0, x = 155
     @Test

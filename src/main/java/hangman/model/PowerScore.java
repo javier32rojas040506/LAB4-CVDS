@@ -23,7 +23,7 @@ public class PowerScore implements  GameScore {
         score -= incorrectCount * 8;
         //min score is 0
         if (score < 0){
-            throw new RuntimeException("min score allowed is 0");
+            score = 0;
         } else if(score > 500) {
             score = 500;
         }

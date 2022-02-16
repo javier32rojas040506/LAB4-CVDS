@@ -23,6 +23,7 @@ public class GameModel {
     private int correctCount;
     private LocalDateTime dateTime;
     private int gameScore;
+    private GameScore schemaGameScore;
     private int[] lettersUsed;
     
     
@@ -34,15 +35,15 @@ public class GameModel {
     
     
    
-    public GameModel(HangmanDictionary dictionary){
+    public GameModel(HangmanDictionary dictionary, GameScore schemaGameScore){
         //this.dictionary = new EnglishDictionaryDataSource();
         this.dictionary=dictionary;
         randomWord = selectRandomWord();
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 100;
-        
+        this.schemaGameScore = schemaGameScore;
+        gameScore = schemaGameScore.calculateScore(0,0);
     }
     
     //method: reset
@@ -52,7 +53,7 @@ public class GameModel {
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 100;
+        gameScore = schemaGameScore.calculateScore(0, 0);
     }
 
     //setDateTime
