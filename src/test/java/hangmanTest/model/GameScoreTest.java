@@ -37,12 +37,10 @@ public class GameScoreTest {
     //CorrectCount = 0 incorrectCount = 11, x = -10
     @Test
     public void originalScoreMinimumAllowed() {
-        try {
-            int score = originalScore.calculateScore(0, 11);
-        }catch (RuntimeException e)
-        {
-            Assert.assertEquals("min score allowed is 0", e.getMessage());
-        }
+
+        int score = originalScore.calculateScore(0, 11);
+        Assert.assertEquals(0, score);
+
     }
     //CorrectCount = 0 incorrectCount = 10, x = 0
     @Test
@@ -84,11 +82,8 @@ public class GameScoreTest {
     //CorrectCount = 0 incorrectCount = 1, x = -5
     @Test
     public void BonusScoreMinimumAllowed() {
-        try{
-            int score = bonusScore.calculateScore(0, 1);
-        }catch (RuntimeException e){
-            Assert.assertEquals("min score allowed is 0",e.getMessage());
-        }
+        int score = bonusScore.calculateScore(0, 1);
+        Assert.assertEquals(0, score);
     }
 
 
@@ -118,11 +113,8 @@ public class GameScoreTest {
     //CorrectCount = 0 incorrectCount = 1, x = -8
     @Test
     public void PowerScoreMinimumAllowed() {
-        try{
-            int score = powerScore.calculateScore(0, 1);
-        }catch (RuntimeException e){
-            Assert.assertEquals("min score allowed is 0",e.getMessage());
-        }
+        int score = powerScore.calculateScore(0, 1);
+        Assert.assertEquals(0, score);
     }
 
     /* x>=500 values x=499 x=500  */

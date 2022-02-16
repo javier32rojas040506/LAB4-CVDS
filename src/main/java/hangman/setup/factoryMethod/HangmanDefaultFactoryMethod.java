@@ -24,7 +24,7 @@ public class HangmanDefaultFactoryMethod extends HangmanFactoryMethod {
 
     @Override
     public GameScore createGameScore() {
-        return new OriginalScore();
+        return new BonusScore();
     }
 
 }
